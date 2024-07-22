@@ -10,18 +10,28 @@ import java.util.Map;
 
 public class FuelListener implements Listener {
     private final Map<String, Integer> carpetBurnTimes;
+    private final boolean useSameBurnTimeForAll;
 
-    public FuelListener(Map<String, Integer> carpetBurnTimes) {
+    public FuelListener(Map<String, Integer> carpetBurnTimes, boolean useSameBurnTimeForAll) {
         this.carpetBurnTimes = carpetBurnTimes;
+        this.useSameBurnTimeForAll = useSameBurnTimeForAll;
     }
 
     @EventHandler
     public void onFurnaceBurn(FurnaceBurnEvent event) {
         ItemStack fuel = event.getFuel();
         if (fuel != null && isCarpet(fuel.getType())) {
-            String color = fuel.getType().name().replace("_CARPET", "").toLowerCase();
-            int burnTime = carpetBurnTimes.getOrDefault(color, carpetBurnTimes.get("default"));
+            int burnTime = getBurnTimeForCarpet(fuel.getType().name());
             event.setBurnTime(burnTime); // Set the burn time from the config
+        }
+    }
+
+    private int getBurnTimeForCarpet(String carpetType) {
+        if (useSameBurnTimeForAll) {
+            return carpetBurnTimes.get("default");
+        } else {
+            String color = carpetType.replace("_CARPET", "").toLowerCase();
+            return carpetBurnTimes.getOrDefault(color, carpetBurnTimes.get("default"));
         }
     }
 

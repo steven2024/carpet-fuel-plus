@@ -1,5 +1,5 @@
 name: CarpetFuelPlus
-version: 1.0
+version: 1.1
 main: net.steve2024.carpetfuelplus.CarpetFuelPlus
 author: steve2024
 api-version: 1.13
@@ -7,12 +7,40 @@ description: A plugin that makes carpet last longer as a fuel source in furnaces
 mcVersion: 1.20.4
 
 commands:
-  setcarpetburntime:
+  setburntime:
     description: Sets the burn time for carpet in seconds.
-    usage: /setcarpetburntime <time_in_seconds>
+    usage: /setburntime <time_in_seconds> [color]
     permission: carpetfuelplus.setburntime
+  checkburntime:
+    description: Checks the current burn time for carpets.
+    usage: /checkburntime [color]
+    permission: carpetfuelplus.checkburntime
+  togglecarpetburntime:
+    description: Toggles between using the same burn time for all carpets or different burn times for each color.
+    usage: /togglecarpetburntime
+    permission: carpetfuelplus.toggleburntime
+  defaultburntime:
+    description: Sets the burn time to the default in vanilla Minecraft.
+    usage: /defaultburntime
+    permission: carpetfuelplus.defaultburntime
+  resetburntime:
+    description: Resets the burn time to the default values in the config.
+    usage: /resetburntime
+    permission: carpetfuelplus.resetburntime
 
 permissions:
   carpetfuelplus.setburntime:
     description: Allows setting the carpet burn time.
+    default: op
+  carpetfuelplus.checkburntime:
+    description: Allows checking the current carpet burn time.
+    default: true
+  carpetfuelplus.toggleburntime:
+    description: Allows toggling between using the same burn time for all carpets or different burn times for each color.
+    default: op
+  carpetfuelplus.defaultburntime:
+    description: Allows setting the burn time to the default in vanilla Minecraft.
+    default: op
+  carpetfuelplus.resetburntime:
+    description: Allows resetting the burn time to the default values in the config.
     default: op

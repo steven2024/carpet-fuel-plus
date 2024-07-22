@@ -15,6 +15,18 @@ commands:
     description: Checks the current burn time for carpets.
     usage: /checkburntime [color]
     permission: carpetfuelplus.checkburntime
+  togglecarpetburntime:
+    description: Toggles between using the same burn time for all carpets or different burn times for each color.
+    usage: /togglecarpetburntime
+    permission: carpetfuelplus.toggleburntime
+  defaultburntime:
+    description: Sets the burn time to the default in vanilla Minecraft.
+    usage: /defaultburntime
+    permission: carpetfuelplus.defaultburntime
+  resetburntime:
+    description: Resets the burn time to the default values in the config.
+    usage: /resetburntime
+    permission: carpetfuelplus.resetburntime
 
 permissions:
   carpetfuelplus.setburntime:
@@ -23,3 +35,12 @@ permissions:
   carpetfuelplus.checkburntime:
     description: Allows checking the current carpet burn time.
     default: true
+  carpetfuelplus.toggleburntime:
+    description: Allows toggling between using the same burn time for all carpets or different burn times for each color.
+    default: op
+  carpetfuelplus.defaultburntime:
+    description: Allows setting the burn time to the default in vanilla Minecraft.
+    default: op
+  carpetfuelplus.resetburntime:
+    description: Allows resetting the burn time to the default values in the config.
+    default: op

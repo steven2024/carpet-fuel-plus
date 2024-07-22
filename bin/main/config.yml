@@ -3,6 +3,9 @@
 # Default burn time for carpet in seconds
 default-burn-time-seconds: 20
 
+# Option to use the same burn time for all carpets
+use-same-burn-time-for-all: true
+
 # Burn time for different carpet colors in seconds
 carpet-burn-times:
   white: 20
@@ -15,4 +18,7 @@ messages:
   setburntime-success: "Carpet burn time set to {time} seconds for {color} carpet."
   setburntime-error: "Invalid number format. Please enter a valid integer."
   checkburntime: "Current burn time for {color} carpet is {time} seconds."
+  toggleburntime-success: "Toggled the use of same burn time for all carpets to {status}."
+  defaultburntime-success: "Burn time set to the default value in vanilla Minecraft."
+  resetburntime-success: "Burn time reset to the default values in the config."
   no-permission: "You do not have permission to use this command."

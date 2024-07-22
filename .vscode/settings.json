@@ -1,0 +1,14 @@
+{
+	"java.compile.nullAnalysis.nullable": [
+		"org.springframework.lang.Nullable",
+		"javax.annotation.Nullable",
+		"org.eclipse.jdt.annotation.Nullable"
+	],
+	"java.compile.nullAnalysis.nonnull": [
+		"org.springframework.lang.NonNull",
+		"javax.annotation.Nonnull",
+		"org.eclipse.jdt.annotation.NonNull"
+	],
+	"java.compile.nullAnalysis.mode": "disabled",
+	"java.configuration.updateBuildConfiguration": "interactive"
+}
