@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'net.steve2024'
-version = '1.0'
+version = '1.1'
 
 sourceCompatibility = '17'
 
