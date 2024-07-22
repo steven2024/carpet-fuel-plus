@@ -12,7 +12,7 @@
 ## Installation Instructions
 
 1. **Download the Plugin:**
-   - Download the latest version of the CarpetFuelPlus plugin JAR file from the [Releases](https://github.com/yourusername/carpet-fuel-plus/releases) page.
+   - Download the latest version of the CarpetFuelPlus plugin JAR file from the [Releases](https://github.com/steven2024/carpet-fuel-plus/releases) page.
 
 2. **Install the Plugin:**
    - Place the downloaded JAR file in your server's `plugins` directory.
