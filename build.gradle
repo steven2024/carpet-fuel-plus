@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'net.steve2024'
+version = '1.0'
+
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigot-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName = 'CarpetFuelPlus'
+    archiveVersion = version
+}

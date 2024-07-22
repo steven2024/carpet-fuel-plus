@@ -1,0 +1,18 @@
+name: CarpetFuelPlus
+version: 1.0
+main: net.steve2024.carpetfuelplus.CarpetFuelPlus
+author: steve2024
+api-version: 1.13
+description: A plugin that makes carpet last longer as a fuel source in furnaces.
+mcVersion: 1.20.4
+
+commands:
+  setcarpetburntime:
+    description: Sets the burn time for carpet in seconds.
+    usage: /setcarpetburntime <time_in_seconds>
+    permission: carpetfuelplus.setburntime
+
+permissions:
+  carpetfuelplus.setburntime:
+    description: Allows setting the carpet burn time.
+    default: op

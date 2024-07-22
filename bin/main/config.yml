@@ -1,0 +1,18 @@
+# Configuration file for CarpetFuelPlus plugin
+
+# Default burn time for carpet in seconds
+default-burn-time-seconds: 20
+
+# Burn time for different carpet colors in seconds
+carpet-burn-times:
+  white: 20
+  red: 20
+  blue: 20
+  # Add more colors as needed
+
+# Custom messages
+messages:
+  setburntime-success: "Carpet burn time set to {time} seconds for {color} carpet."
+  setburntime-error: "Invalid number format. Please enter a valid integer."
+  checkburntime: "Current burn time for {color} carpet is {time} seconds."
+  no-permission: "You do not have permission to use this command."

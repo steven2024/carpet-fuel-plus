@@ -1,0 +1,4 @@
+# Configuration file for CarpetFuelPlus plugin
+
+# Burn time for carpet in seconds
+carpet-burn-time-seconds: 20
